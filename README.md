@@ -26,15 +26,22 @@ ok      github.com/jcbritobr/keygen     0.745s
 
 * Usage
 ```
-$ .\keygen.exe -h         
-Usage of C:\Workspace\go\keygen\keygen.exe:
-  -k int
-        Use -k for the key size (default 14)
-  -l    Use -l to insert lowercase characters in key (default true)
-  -n    Use -n to insert uppercase characters in key
-  -s    Use -s to insert uppercase characters in key
-  -u    Use -u to insert uppercase characters in ke
+$ .\keygen.exe --help           
+Keygen is a very fast random key generator.
+        Its possible to choose between lowercase, uppercase, number and symbol characters,
+        and also the key's size
 
-$ .\keygen.exe -k 20 -s -n
-70$50#lwu>3%?51g2(m:
+Usage:
+  keygen [flags]
+
+Flags:
+  -h, --help         help for keygen
+      --length int   inserts the key length (default 8)
+  -l, --lowercase    inserts lowercase characters in key
+  -n, --number       inserts digit characters in key
+  -s, --symbol       inserts symbol characters in key
+  -u, --uppercase    inserts uppercase characters in key
+
+$ .\keygen.exe --length 80 -luns
+g07ouGw7&l0UWKEm(%&+I"GG-7g573"7(43!j++-(QBg1mWd6N gDpa4M'0MmI1tlPy!Q 1M,0P8sa)1
 ```
