@@ -10,7 +10,7 @@ type AsciiRange struct {
 }
 
 var (
-	ArSymbol    = AsciiRange{32, 47}
+	ArSymbol    = AsciiRange{35, 38}
 	ArLowercase = AsciiRange{97, 122}
 	ArUppercase = AsciiRange{65, 90}
 	ArNumber    = AsciiRange{48, 57}
