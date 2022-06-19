@@ -1,7 +1,10 @@
 package uniengine
 
 import (
+	"errors"
+	"fmt"
 	"math/rand"
+	"os"
 	"time"
 )
 
@@ -14,6 +17,8 @@ var (
 	ArLowercase = AsciiRange{97, 122}
 	ArUppercase = AsciiRange{65, 90}
 	ArNumber    = AsciiRange{48, 57}
+
+	errArgMissing = errors.New("Missing at least one argument: -luns")
 )
 
 func aggregate(buffer *[]rune, r AsciiRange, size int, agg bool) []rune {
@@ -25,6 +30,11 @@ func aggregate(buffer *[]rune, r AsciiRange, size int, agg bool) []rune {
 
 func GenerateRandomKey(lower, upper, number, symbol bool, size int) string {
 	args := sumTrueValues(lower, upper, number, symbol)
+	if args == 0 {
+		fmt.Println(errArgMissing)
+		os.Exit(1)
+	}
+
 	last := size % args
 	size_of_part := size / args
 	buffer := make([]rune, 0)
