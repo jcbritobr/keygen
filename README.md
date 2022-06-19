@@ -8,20 +8,17 @@ $ go build -v -ldflags "-s -w"
 
 * Test - Also in root folder run the command:
 ```
-$ go test . -v
-
-=== RUN   TestGenerateKeyMustGenerateLowercaseString\
---- PASS: TestGenerateKeyMustGenerateLowercaseString (0.00s)\
-=== RUN   TestGenerateKeyMustGenerateUppercaseString\
---- PASS: TestGenerateKeyMustGenerateUppercaseString (0.00s)\
-=== RUN   TestGenerateKeyMustGenerateNumberString\
---- PASS: TestGenerateKeyMustGenerateNumberString (0.00s)\
-=== RUN   TestGenerateKeyMustGenerateSymbolString\
---- PASS: TestGenerateKeyMustGenerateSymbolString (0.00s)\
-=== RUN   TestGenerateKeyMustHaveCorrectKeySize\
---- PASS: TestGenerateKeyMustHaveCorrectKeySize (0.00s)\
-PASS\
-ok      github.com/jcbritobr/keygen     0.745s
+$ go test .\uniengine\
+ok      github.com/jcbritobr/keygen/uniengine   0.594s
+PS C:\Workspace\go\keygen> go test .\uniengine\ -v
+=== RUN   TestRandomInRangeIsCharacterKindAndLength
+--- PASS: TestRandomInRangeIsCharacterKindAndLength (0.00s)
+=== RUN   TestSumTrueValue
+--- PASS: TestSumTrueValue (0.00s)
+=== RUN   TestGenerateKeyFunction
+--- PASS: TestGenerateKeyFunction (0.00s)
+PASS
+ok      github.com/jcbritobr/keygen/uniengine   (cached)
 ``` 
 
 * Usage
