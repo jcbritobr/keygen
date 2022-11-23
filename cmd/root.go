@@ -19,12 +19,10 @@ var (
 var rootCmd = &cobra.Command{
 	Use:   "keygen",
 	Short: "Keygen is a very fast random key generator",
-	Long: `Keygen is a very fast random key generator.
-	Its possible to choose between lowercase, uppercase, number and symbol characters,
-	and also the key's size`,
+	Long:  `Keygen is a very fast random key generator. Its possible to choose between lowercase, uppercase, number and symbol characters, and also the key's size`,
 	Run: func(cmd *cobra.Command, args []string) {
 		key := uniengine.GenerateRandomKey(lowercase, uppercase, number, symbol, length)
-		fmt.Println(key)
+		fmt.Print(key)
 	},
 }
 
